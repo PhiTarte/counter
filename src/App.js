@@ -20,10 +20,11 @@ class App extends Component {
 
   decrement() {
     console.log('decrement')
-    //modifier le state
+    //modifier le state SI l'êtat est supérieur à 0
+    if (this.state.count >0) {
     this.setState(
       prevState => ({count: prevState.count - 1})
-    )
+    )}
   }  
 
   render() {
